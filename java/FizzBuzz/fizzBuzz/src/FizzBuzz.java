@@ -2,17 +2,6 @@ public class FizzBuzz {
     
     public String run(int[] numbers) {
         String result = "";
-        for(int i = 0; i < numbers.length; i++) {
-            if(numbers[i] % 15 == 0) {
-                result+= "FizzBuzz ";
-            } else if (numbers[i] % 3 == 0) {
-                result+= "Fizz ";
-            } else if (numbers[i] % 5 == 0) {
-                result+= "Buzz ";
-            } else {
-                result+= numbers[i] + " ";
-            }
-        }
         return result.trim();
     }
 
