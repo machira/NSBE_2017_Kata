@@ -1,4 +1,5 @@
 import unittest
+
 import lists
 
 
@@ -17,6 +18,12 @@ class ListTests(unittest.TestCase):
         self.assertEqual([1, 3], lists.all_odd([1, 2, 3]))
         self.assertEqual([], lists.all_odd([]))
         self.assertRaises(ValueError, lists.all_odd([1, 2, 3, "a", ]))
+
+    def test_contains(self):
+        self.assertEqual(lists.contains([2], 2), True)
+        self.assertEqual(lists.contains([1, 2, 3], 2), True)
+        self.assertEqual(lists.contains([1, 2, 3], 4), False)
+        self.assertEqual(lists.contains([], 2), False)
 
     def test_total(self):
         self.assertEqual(6, lists.total([1, 2, 3]))
